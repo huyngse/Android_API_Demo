@@ -1,7 +1,6 @@
 package com.example.android_api_demo.activities;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,7 +18,7 @@ import com.example.android_api_demo.ApiService;
 import com.example.android_api_demo.R;
 import com.example.android_api_demo.RetrofitClient;
 import com.example.android_api_demo.requests.LoginRequest;
-import com.example.android_api_demo.response.LoginResponse;
+import com.example.android_api_demo.responses.LoginResponse;
 import com.example.android_api_demo.utils.TokenManager;
 
 import retrofit2.Call;

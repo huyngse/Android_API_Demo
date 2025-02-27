@@ -2,7 +2,7 @@ package com.example.android_api_demo;
 
 import com.example.android_api_demo.models.Food;
 import com.example.android_api_demo.requests.LoginRequest;
-import com.example.android_api_demo.response.LoginResponse;
+import com.example.android_api_demo.responses.LoginResponse;
 
 import java.util.List;
 

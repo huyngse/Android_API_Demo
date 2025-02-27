@@ -1,4 +1,4 @@
-package com.example.android_api_demo.response;
+package com.example.android_api_demo.responses;
 
 public class LoginResponse {
     private String token;

@@ -15,4 +15,11 @@ public class TokenManager {
         SharedPreferences sharedPreferences = context.getSharedPreferences("MyAppPrefs", Context.MODE_PRIVATE);
         return sharedPreferences.getString("TOKEN", null);
     }
+
+    public static void clearToken(Context context) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences("MyAppPrefs", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.remove("TOKEN");
+        editor.apply();
+    }
 }

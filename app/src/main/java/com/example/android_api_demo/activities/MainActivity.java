@@ -3,6 +3,7 @@ package com.example.android_api_demo.activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,6 +12,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.android_api_demo.R;
+import com.example.android_api_demo.utils.TokenManager;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
         Button getAllButton = findViewById(R.id.menu_get_all_btn);
         Button loginButton = findViewById(R.id.menu_login_btn);
+        Button clearTokenButton = findViewById(R.id.menu_clear_token_btn);
         getAllButton.setOnClickListener(v -> {
             Intent intent = new Intent(this, GetAllActivity.class);
             startActivity(intent);
@@ -34,6 +37,10 @@ public class MainActivity extends AppCompatActivity {
         loginButton.setOnClickListener(v -> {
             Intent intent = new Intent(this, LoginActivity.class);
             startActivity(intent);
+        });
+        clearTokenButton.setOnClickListener(v -> {
+            TokenManager.clearToken(getBaseContext());
+            Toast.makeText(this, "Clear token successfully", Toast.LENGTH_SHORT).show();
         });
     }
 }
