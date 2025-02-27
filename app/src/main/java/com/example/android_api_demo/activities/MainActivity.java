@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         Button loginButton = findViewById(R.id.menu_login_btn);
         Button clearTokenButton = findViewById(R.id.menu_clear_token_btn);
         Button getByIdButton = findViewById(R.id.menu_get_by_id_btn);
+        Button createButton = findViewById(R.id.menu_create_new_btn);
         getAllButton.setOnClickListener(v -> {
             Intent intent = new Intent(this, GetAllActivity.class);
             startActivity(intent);
@@ -41,6 +42,10 @@ public class MainActivity extends AppCompatActivity {
         });
         getByIdButton.setOnClickListener(v -> {
             Intent intent = new Intent(this, GetByIdActivity.class);
+            startActivity(intent);
+        });
+        createButton.setOnClickListener(v -> {
+            Intent intent = new Intent(this, CreateActivity.class);
             startActivity(intent);
         });
         clearTokenButton.setOnClickListener(v -> {

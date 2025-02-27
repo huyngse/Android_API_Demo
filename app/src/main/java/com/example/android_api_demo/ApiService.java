@@ -22,4 +22,7 @@ public interface ApiService {
 
     @GET("food/{id}")
     Call<Food> getFoodById(@Header("Authorization") String token, @Path("id") int id);
+
+    @POST("food")
+    Call<Food> createFood(@Header("Authorization") String token, @Body Food food);
 }

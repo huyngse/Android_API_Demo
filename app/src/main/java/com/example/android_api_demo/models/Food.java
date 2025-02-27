@@ -10,6 +10,13 @@ public class Food {
     private double price;
     private Date createdAt;
 
+    public Food(String image, String name, String description, double price) {
+        this.image = image;
+        this.name = name;
+        this.description = description;
+        this.price = price;
+    }
+
     public int getId() {
         return id;
     }
@@ -33,4 +40,5 @@ public class Food {
     public Date getCreatedAt() {
         return createdAt;
     }
+
 }
