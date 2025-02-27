@@ -26,8 +26,13 @@ public class MainActivity extends AppCompatActivity {
         });
 
         Button getAllButton = findViewById(R.id.menu_get_all_btn);
+        Button loginButton = findViewById(R.id.menu_login_btn);
         getAllButton.setOnClickListener(v -> {
             Intent intent = new Intent(this, GetAllActivity.class);
+            startActivity(intent);
+        });
+        loginButton.setOnClickListener(v -> {
+            Intent intent = new Intent(this, LoginActivity.class);
             startActivity(intent);
         });
     }
