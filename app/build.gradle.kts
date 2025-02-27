@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace = "com.example.android_api_demo"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.android_api_demo"
