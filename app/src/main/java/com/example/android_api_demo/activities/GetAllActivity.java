@@ -86,7 +86,7 @@ public class GetAllActivity extends AppCompatActivity {
     private void displayProducts(List<Food> foods) {
         String[] productNames = new String[foods.size()];
         for (int i = 0; i < foods.size(); i++) {
-            productNames[i] = foods.get(i).getName() + " - $" + foods.get(i).getPrice();
+            productNames[i] = foods.get(i).getId() + " - " + foods.get(i).getName() + " - $" + foods.get(i).getPrice();
         }
 
         adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, productNames);
