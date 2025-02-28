@@ -1,5 +1,7 @@
 package com.example.android_api_demo.models;
 
+import androidx.annotation.NonNull;
+
 import java.util.Date;
 
 public class Food {
@@ -41,4 +43,9 @@ public class Food {
         return createdAt;
     }
 
+    @NonNull
+    @Override
+    public String toString() {
+        return name; 
+    }
 }

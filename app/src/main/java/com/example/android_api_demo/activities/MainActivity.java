@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         Button getByIdButton = findViewById(R.id.menu_get_by_id_btn);
         Button createButton = findViewById(R.id.menu_create_new_btn);
         Button deleteButton = findViewById(R.id.menu_delete_btn);
+        Button updateButton = findViewById(R.id.menu_update_btn);
         getAllButton.setOnClickListener(v -> {
             Intent intent = new Intent(this, GetAllActivity.class);
             startActivity(intent);
@@ -47,6 +48,10 @@ public class MainActivity extends AppCompatActivity {
         });
         createButton.setOnClickListener(v -> {
             Intent intent = new Intent(this, CreateActivity.class);
+            startActivity(intent);
+        });
+        updateButton.setOnClickListener(v -> {
+            Intent intent = new Intent(this, UpdateActivity.class);
             startActivity(intent);
         });
         deleteButton.setOnClickListener(v -> {

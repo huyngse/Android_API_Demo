@@ -12,6 +12,7 @@ import retrofit2.http.DELETE;
 import retrofit2.http.GET;
 import retrofit2.http.Header;
 import retrofit2.http.POST;
+import retrofit2.http.PUT;
 import retrofit2.http.Path;
 
 public interface ApiService {
@@ -27,6 +28,9 @@ public interface ApiService {
     @POST("food")
     Call<Food> createFood(@Header("Authorization") String token, @Body Food food);
 
+    @PUT("food/{id}")
+    Call<Food> updateFood(@Header("Authorization") String token, @Path("id") int id, @Body Food food);
+
     @DELETE("food/{id}")
-    Call<Food> deleteFood(@Header("Authorization") String token, @Path("id") int id);
+    Call<Void> deleteFood(@Header("Authorization") String token, @Path("id") int id);
 }

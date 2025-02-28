@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".activities.UpdateActivity">
+
+    <TextView
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="PUT /api/food/{id}"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
+
+    <Spinner
+        android:id="@+id/food_spinner"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp" />
+
+    <EditText
+        android:id="@+id/update_image_input"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:hint="Image URL"
+        android:importantForAutofill="no"
+        android:inputType="textUri"
+        android:minHeight="48dp"
+        android:textColorHint="#546E7A"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/update_name_input"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:hint="Food Name"
+        android:importantForAutofill="no"
+        android:inputType="textMultiLine"
+        android:minHeight="48dp"
+        android:textColorHint="#546E7A"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/update_description_input"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:hint="Description"
+        android:importantForAutofill="no"
+        android:inputType="textMultiLine"
+        android:minHeight="48dp"
+        android:textColorHint="#546E7A"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/update_price_input"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:hint="Price"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/update_food_button"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:text="Update Food"
+        tools:ignore="HardcodedText" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+</LinearLayout>

@@ -1,6 +1,7 @@
 package com.example.android_api_demo.activities;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -52,11 +53,11 @@ public class DeleteActivity extends AppCompatActivity {
         progressBar.setVisibility(View.VISIBLE);
         ApiService apiService = RetrofitClient.getClient()
                 .create(ApiService.class);
-        Call<Food> call = apiService.getFoodById("Bearer " + TokenManager.getToken(getBaseContext()), id);
+        Call<Void> call = apiService.deleteFood("Bearer " + TokenManager.getToken(getBaseContext()), id);
 
         call.enqueue(new Callback<>() {
             @Override
-            public void onResponse(@NonNull Call<Food> call, @NonNull Response<Food> response) {
+            public void onResponse(@NonNull Call<Void> call, @NonNull Response<Void> response) {
                 progressBar.setVisibility(View.GONE);
                 if (response.isSuccessful()) {
                     Toast.makeText(DeleteActivity.this, "Delete food successfully!", Toast.LENGTH_SHORT).show();
@@ -67,7 +68,8 @@ public class DeleteActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(@NonNull Call<Food> call, @NonNull Throwable t) {
+            public void onFailure(@NonNull Call<Void> call, @NonNull Throwable t) {
+                Log.d("ERROR", t.getMessage());
                 progressBar.setVisibility(View.GONE);
                 Toast.makeText(DeleteActivity.this, "Error: " + t.getMessage(), Toast.LENGTH_SHORT).show();
             }
